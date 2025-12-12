@@ -22,7 +22,7 @@ Toutes les étapes sont documentées avec captures d’écran.
 
 - Génération clé privée
 
-- nExtraction clé publique
+- Extraction clé publique
 
 - Message original
 
@@ -49,11 +49,11 @@ Toutes les étapes sont documentées avec captures d’écran.
 Le portail universitaire manipule des données sensibles.
 L'objectif est d'assurer :
 
-🔒 Confidentialité → RSA
+## 🔒 Confidentialité → RSA
 
-🛡️ Intégrité → HMAC
+## 🛡️ Intégrité → HMAC
 
-✔️ Preuves → captures d’écran
+## ✔️ Preuves → captures d’écran
 
 ---
 
@@ -78,6 +78,7 @@ openssl genpkey -algorithm RSA -aes256 -out private.pem -pkeyopt rsa_keygen_bits
 ```
 
 <img width="2559" height="1286" alt="image" src="https://github.com/user-attachments/assets/40fe1284-d393-4ce6-a834-6667f6fa110e" />
+
 ## Explication :
 Une clé privée RSA de 2048 bits est générée et protégée par une passphrase.
 Elle servira pour le déchiffrement.
@@ -95,6 +96,7 @@ openssl rsa -in private.pem -pubout -out public.pem
 ## Explication :
 
 La clé publique est dérivée de la clé privée et peut être diffusée.
+
 --- 
 ## 3️⃣ Message original : message.txt
 
@@ -108,7 +110,7 @@ Ce fichier contient le message sensible à protéger.
 openssl rsautl -encrypt -pubin -inkey public.pem -in message.txt -out message.enc
 ```
 
-Résultat attendu : contenu illisible → cryptogramme
+**Résultat attendu** : contenu illisible → cryptogramme
 
 <img width="1873" height="269" alt="image" src="https://github.com/user-attachments/assets/94dcca86-a7e3-4af4-bc06-0c05fccc5c0c" />
 <img width="2559" height="595" alt="image" src="https://github.com/user-attachments/assets/9225ef01-1294-47d4-a3f9-5fff84057a05" />
@@ -123,8 +125,10 @@ openssl rsautl -decrypt -inkey private.pem -in message.enc -out message_decrypte
 
 <img width="1872" height="231" alt="image" src="https://github.com/user-attachments/assets/43ca8b55-2d5a-4077-b39a-ed298c5d97d8" />
 <img width="2559" height="646" alt="image" src="https://github.com/user-attachments/assets/26d8e9bc-287a-4976-a4c3-58affcb40a0e" />
+
 ## Explication :
 Le message déchiffré doit être identique au message original.
+
 --- 
 
 ## 🧾 HMAC en Java
@@ -138,7 +142,7 @@ Un HMAC garantit que le message n’a pas été modifié (intégrité).
 
 ## 7️⃣ Vérification d’intégrité → “Message intact.”
 
-Le HMAC est recalculé : s’il est identique → message non modifié.
+**Le HMAC est recalculé** : s’il est identique → message non modifié.
 
 ```
 Message intact.
@@ -155,7 +159,19 @@ Message modified!
 ```
 <img width="2559" height="1272" alt="image" src="https://github.com/user-attachments/assets/848f3e78-3767-40e2-9d62-4273291f6514" />
 
+---
 
+## 📝 Conclusion
+
+Ce TP démontre la mise en œuvre concrète :
+
+- du chiffrement RSA pour protéger la confidentialité,
+
+- de la signature HMAC pour garantir l'intégrité des messages,
+
+- d’une procédure cryptographique complète avec preuves visuelles.
+
+La combinaison RSA + HMAC constitue une solution robuste utilisée dans de nombreux systèmes sécurisés (APIs, serveurs web, authentification).
 
 
 
