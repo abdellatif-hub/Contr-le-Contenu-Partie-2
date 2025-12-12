@@ -6,9 +6,9 @@ Chiffrement RSA + Signature HMAC (Java)
 
 Ce projet met en œuvre deux mécanismes fondamentaux de la sécurité informatique :
 
--Confidentialité via le chiffrement asymétrique RSA
+- Confidentialité via le chiffrement asymétrique RSA
 
--Intégrité via la signature HMAC-SHA256
+- Intégrité via la signature HMAC-SHA256
 
 Toutes les étapes sont documentées avec captures d’écran.
 
@@ -20,23 +20,23 @@ Toutes les étapes sont documentées avec captures d’écran.
 
 3.RSA avec OpenSSL
 
--Génération clé privée
+- Génération clé privée
 
--Extraction clé publique
+- nExtraction clé publique
 
--Message original
+- Message original
 
--Chiffrement
+- Chiffrement
 
--Déchiffrement
+- Déchiffrement
 
 4.HMAC en Java
 
--Génération HMAC
+- Génération HMAC
 
--Vérification "Message intact"
+- Vérification "Message intact"
 
--Détection message modifié
+- Détection message modifié
 
 5.Captures d’écran complètes
 
