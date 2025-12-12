@@ -14,11 +14,11 @@ Toutes les étapes sont documentées avec captures d’écran.
 
 ## 📚 Table des matières
 
-1.Contexte du TP
+1. Contexte du TP
+ 
+2. Arborescence du projet
 
-2.Arborescence du projet
-
-3.RSA avec OpenSSL
+3. RSA avec OpenSSL
 
 - Génération clé privée
 
