@@ -14,11 +14,11 @@ Toutes les étapes sont documentées avec captures d’écran.
 
 ## 📚 Table des matières
 
-1. Contexte du TP
+**1.** Contexte du TP
  
-2. Arborescence du projet
+**2.** Arborescence du projet
 
-3. RSA avec OpenSSL
+**3.** RSA avec OpenSSL
 
 - Génération clé privée
 
@@ -30,7 +30,7 @@ Toutes les étapes sont documentées avec captures d’écran.
 
 - Déchiffrement
 
-4.HMAC en Java
+**4.** HMAC en Java
 
 - Génération HMAC
 
@@ -38,9 +38,9 @@ Toutes les étapes sont documentées avec captures d’écran.
 
 - Détection message modifié
 
-5.Captures d’écran complètes
+**5.** Captures d’écran complètes
 
-6.Conclusion
+**6.** Conclusion
 
 ---
 
